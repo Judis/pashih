@@ -1,0 +1,8 @@
+// Place all the styles related to the Admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body.admin, body.admin header .title h1, body.admin header .title h1 small,
+body.admin p, body.admin h1, body.admin h2 {
+  font-family: Arial;
+}

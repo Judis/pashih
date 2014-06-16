@@ -1,0 +1,733 @@
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/actionpack-3.2.8/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+[2013-07-09 14:25:31] INFO  WEBrick 1.3.1
+[2013-07-09 14:25:31] INFO  ruby 2.0.0 (2013-06-27) [x86_64-linux]
+[2013-07-09 14:25:31] INFO  WEBrick::HTTPServer#start: pid=26732 port=3333
+=> Booting WEBrick
+=> Rails 3.2.8 application starting in development on http://0.0.0.0:3333
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 14:25:34 +0700
+Connecting to database specified by database.yml
+Processing by CategoryController#all as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.0ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (6.6ms)
+Compiled application.css  (1ms)  (pid 26732)
+Compiled application.js  (0ms)  (pid 26732)
+default_url_options is passed options: {}
+
+Completed 200 OK in 181ms (Views: 67.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-09 14:25:35 +0700
+Served asset /application.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-09 14:25:35 +0700
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/logo-top.png" for 127.0.0.1 at 2013-07-09 14:25:35 +0700
+Served asset /logo-top.png - 200 OK (3ms)
+
+
+Started GET "/assets/tex.png" for 127.0.0.1 at 2013-07-09 14:25:35 +0700
+Served asset /tex.png - 200 OK (4ms)
+
+
+Started GET "/assets/star.png" for 127.0.0.1 at 2013-07-09 14:25:35 +0700
+Served asset /star.png - 200 OK (4ms)
+
+
+Started GET "/assets/fcbook.png" for 127.0.0.1 at 2013-07-09 14:25:35 +0700
+Served asset /fcbook.png - 200 OK (3ms)
+
+
+Started GET "/assets/vk.png" for 127.0.0.1 at 2013-07-09 14:25:35 +0700
+Served asset /vk.png - 200 OK (4ms)
+
+
+Started GET "/assets/logo-bottom.png" for 127.0.0.1 at 2013-07-09 14:25:35 +0700
+Served asset /logo-bottom.png - 200 OK (4ms)
+
+
+Started GET "/assets/odesk.png" for 127.0.0.1 at 2013-07-09 14:25:35 +0700
+Served asset /odesk.png - 200 OK (8ms)
+
+
+Started GET "/assets/tweet.png" for 127.0.0.1 at 2013-07-09 14:25:35 +0700
+Served asset /tweet.png - 200 OK (5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 14:25:46 +0700
+Processing by CategoryController#all as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (1.2ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-09 14:25:46 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-09 14:25:46 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo-top.png" for 127.0.0.1 at 2013-07-09 14:25:46 +0700
+Served asset /logo-top.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 14:26:12 +0700
+Processing by CategoryController#all as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (1.0ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 75ms (Views: 72.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-09 14:26:13 +0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-09 14:26:13 +0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/tex.png" for 127.0.0.1 at 2013-07-09 14:26:13 +0700
+Served asset /tex.png - 200 OK (0ms)
+
+
+Started GET "/assets/logo-bottom.png" for 127.0.0.1 at 2013-07-09 14:26:13 +0700
+Served asset /logo-bottom.png - 200 OK (0ms)
+
+
+Started GET "/assets/logo-top.png" for 127.0.0.1 at 2013-07-09 14:26:13 +0700
+Served asset /logo-top.png - 200 OK (0ms)
+
+
+Started GET "/assets/star.png" for 127.0.0.1 at 2013-07-09 14:26:13 +0700
+Served asset /star.png - 200 OK (0ms)
+
+
+Started GET "/assets/fcbook.png" for 127.0.0.1 at 2013-07-09 14:26:13 +0700
+Served asset /fcbook.png - 200 OK (0ms)
+
+
+Started GET "/assets/vk.png" for 127.0.0.1 at 2013-07-09 14:26:13 +0700
+Served asset /vk.png - 200 OK (0ms)
+
+
+Started GET "/assets/tweet.png" for 127.0.0.1 at 2013-07-09 14:26:13 +0700
+Served asset /tweet.png - 200 OK (0ms)
+
+
+Started GET "/assets/odesk.png" for 127.0.0.1 at 2013-07-09 14:26:13 +0700
+Served asset /odesk.png - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 14:26:28 +0700
+Processing by CategoryController#all as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (0.9ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-09 14:26:28 +0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-09 14:26:28 +0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo-top.png" for 127.0.0.1 at 2013-07-09 14:26:28 +0700
+Served asset /logo-top.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 14:26:34 +0700
+Processing by CategoryController#all as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (0.9ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-09 14:26:35 +0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-09 14:26:35 +0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/logo-top.png" for 127.0.0.1 at 2013-07-09 14:26:35 +0700
+Served asset /logo-top.png - 200 OK (0ms)
+
+
+Started GET "/assets/star.png" for 127.0.0.1 at 2013-07-09 14:26:35 +0700
+Served asset /star.png - 200 OK (0ms)
+
+
+Started GET "/assets/tex.png" for 127.0.0.1 at 2013-07-09 14:26:35 +0700
+Served asset /tex.png - 200 OK (0ms)
+
+
+Started GET "/assets/logo-bottom.png" for 127.0.0.1 at 2013-07-09 14:26:35 +0700
+Served asset /logo-bottom.png - 200 OK (0ms)
+
+
+Started GET "/assets/fcbook.png" for 127.0.0.1 at 2013-07-09 14:26:35 +0700
+Served asset /fcbook.png - 200 OK (0ms)
+
+
+Started GET "/assets/vk.png" for 127.0.0.1 at 2013-07-09 14:26:35 +0700
+Served asset /vk.png - 200 OK (0ms)
+
+
+Started GET "/assets/tweet.png" for 127.0.0.1 at 2013-07-09 14:26:35 +0700
+Served asset /tweet.png - 200 OK (0ms)
+
+
+Started GET "/assets/odesk.png" for 127.0.0.1 at 2013-07-09 14:26:35 +0700
+Served asset /odesk.png - 200 OK (0ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2013-07-09 14:26:46 +0700
+Processing by CategoryController#all as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.4ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (2.8ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2013-07-09 14:26:47 +0700
+Processing by CategoryController#all as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (1.3ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2013-07-09 14:28:24 +0700
+Processing by CategoryController#all as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (1.0ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 82ms (Views: 80.1ms | ActiveRecord: 0.6ms)
+[2013-07-09 14:30:26] FATAL SignalException: SIGTERM
+	/home/pasha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:170:in `select'
+	/home/pasha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:170:in `block in start'
+	/home/pasha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:32:in `start'
+	/home/pasha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:160:in `start'
+	/home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/rack-1.4.5/lib/rack/handler/webrick.rb:13:in `run'
+	/home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/rack-1.4.5/lib/rack/server.rb:268:in `start'
+	/home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/railties-3.2.8/lib/rails/commands/server.rb:70:in `start'
+	/home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/railties-3.2.8/lib/rails/commands.rb:55:in `block in <top (required)>'
+	/home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/railties-3.2.8/lib/rails/commands.rb:50:in `tap'
+	/home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/railties-3.2.8/lib/rails/commands.rb:50:in `<top (required)>'
+	script/rails:6:in `require'
+	script/rails:6:in `<main>'
+[2013-07-09 14:30:26] INFO  going to shutdown ...
+[2013-07-09 14:30:26] INFO  WEBrick::HTTPServer#start done.
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 14:28:29 +0700
+Processing by CategoryController#all as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (0.9ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2013-07-09 14:28:36 +0700
+Processing by CategoryController#all as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (0.5ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/en/contact-me" for 127.0.0.1 at 2013-07-09 14:28:38 +0700
+Processing by PageController#view as HTML
+  Parameters: {"locale"=>"en", "slug"=>"contact-me"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."slug" = 'contact-me' LIMIT 1[0m
+  Rendered page/view.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: <div class="content-block">
+    2:   <h1><%= @page['title_'+t(:lang)] %></h1>
+    3:   <%= raw @page['content_'+t(:lang)] %>
+    4: </div>
+  app/views/page/view.html.erb:2:in `_app_views_page_view_html_erb___4431715692464976674_18683480'
+
+
+  Rendered /home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.5ms)
+Exiting
+        SECURITY WARNING: No secret option provided to Rack::Session::Cookie.
+        This poses a security threat. It is strongly recommended that you
+        provide a secret to prevent exploits that may be possible from crafted
+        cookies. This will not be supported in future versions of Rack, and
+        future versions will even invalidate your existing user cookies.
+
+        Called from: /home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/actionpack-3.2.8/lib/action_dispatch/middleware/session/abstract_store.rb:28:in `initialize'.
+[2013-07-09 14:57:11] INFO  WEBrick 1.3.1
+[2013-07-09 14:57:11] INFO  ruby 2.0.0 (2013-06-27) [x86_64-linux]
+[2013-07-09 14:57:11] INFO  WEBrick::HTTPServer#start: pid=30752 port=3333
+=> Booting WEBrick
+=> Rails 3.2.8 application starting in development on http://0.0.0.0:3333
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 15:01:55 +0700
+Connecting to database specified by database.yml
+Processing by CategoryController#all as HTML
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (3.4ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 95ms (Views: 65.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 15:02:44 +0700
+Processing by CategoryController#all as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.1ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (0.5ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 15:03:05 +0700
+Processing by CategoryController#all as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (1.1ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 91.238.210.82 at 2013-07-09 15:21:54 +0700
+Processing by CategoryController#all as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.4ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (1.0ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 17:23:15 +0700
+Processing by CategoryController#all as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.2ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (0.6ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2013-07-09 17:23:17 +0700
+Processing by CategoryController#all as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (1.0ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/en/contact-me" for 127.0.0.1 at 2013-07-09 17:23:19 +0700
+Processing by PageController#view as HTML
+  Parameters: {"locale"=>"en", "slug"=>"contact-me"}
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."slug" = 'contact-me' LIMIT 1[0m
+  Rendered page/view.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: <div class="content-block">
+    2:   <h1><%= @page['title_'+t(:lang)] %></h1>
+    3:   <%= raw @page['content_'+t(:lang)] %>
+    4: </div>
+  app/views/page/view.html.erb:2:in `_app_views_page_view_html_erb___2853866604670298562_26576420'
+
+
+  Rendered /home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (63.9ms)
+  Rendered /home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (77.9ms)
+
+
+Started GET "/en/about" for 127.0.0.1 at 2013-07-09 17:23:23 +0700
+Processing by PageController#view as HTML
+  Parameters: {"locale"=>"en", "slug"=>"about"}
+  [1m[35mPage Load (0.4ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."slug" = 'about' LIMIT 1
+  Rendered page/view.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: <div class="content-block">
+    2:   <h1><%= @page['title_'+t(:lang)] %></h1>
+    3:   <%= raw @page['content_'+t(:lang)] %>
+    4: </div>
+  app/views/page/view.html.erb:2:in `_app_views_page_view_html_erb___2853866604670298562_26576420'
+
+
+  Rendered /home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.9ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2013-07-09 17:23:26 +0700
+Processing by CategoryController#all as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (2.7ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2013-07-09 17:23:28 +0700
+Processing by CategoryController#all as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (1.1ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2013-07-09 17:23:29 +0700
+Processing by CategoryController#all as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (1.0ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ru" for 127.0.0.1 at 2013-07-09 17:25:48 +0700
+Processing by CategoryController#all as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mJob Load (0.3ms)[0m  SELECT "jobs".* FROM "jobs" ORDER BY created_at
+  Rendered category/all.html.erb within layouts/application (1.0ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ru/about" for 127.0.0.1 at 2013-07-09 17:25:50 +0700
+Processing by PageController#view as HTML
+  Parameters: {"locale"=>"ru", "slug"=>"about"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."slug" = 'about' LIMIT 1[0m
+  Rendered page/view.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    1: <div class="content-block">
+    2:   <h1><%= @page['title_'+t(:lang)] %></h1>
+    3:   <%= raw @page['content_'+t(:lang)] %>
+    4: </div>
+  app/views/page/view.html.erb:2:in `_app_views_page_view_html_erb___2853866604670298562_25600720'
+
+
+  Rendered /home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.6ms)
+A server is already running. Check /var/www/pasha/tmp/pids/server.pid.
+=> Booting WEBrick
+=> Rails 3.2.8 application starting in development on http://0.0.0.0:3333
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+Exiting
+Compiled application.js  (1ms)  (pid 14541)
+Compiled application.css  (0ms)  (pid 14541)
+Compiled ckeditor/application.js  (0ms)  (pid 14541)
+Compiled ckeditor/config.js  (0ms)  (pid 14541)
+Compiled ckeditor/filebrowser/javascripts/application.js  (0ms)  (pid 14541)
+Compiled ckeditor/init.js  (1ms)  (pid 14541)
+Compiled ckeditor/application.css  (0ms)  (pid 14541)
+Compiled ckeditor/build-config.js  (0ms)  (pid 14541)
+Compiled ckeditor/ckeditor.js  (69ms)  (pid 14541)
+Compiled ckeditor/contents.css  (0ms)  (pid 14541)
+Compiled ckeditor/lang/af.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/ar.js  (1ms)  (pid 14541)
+Compiled ckeditor/lang/bg.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/bn.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/bs.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/ca.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/cs.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/cy.js  (1ms)  (pid 14541)
+Compiled ckeditor/lang/da.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/de.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/el.js  (1ms)  (pid 14541)
+Compiled ckeditor/lang/en-au.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/en-ca.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/en-gb.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/en.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/eo.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/es.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/et.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/eu.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/fa.js  (1ms)  (pid 14541)
+Compiled ckeditor/lang/fi.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/fo.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/fr-ca.js  (1ms)  (pid 14541)
+Compiled ckeditor/lang/fr.js  (1ms)  (pid 14541)
+Compiled ckeditor/lang/gl.js  (1ms)  (pid 14541)
+Compiled ckeditor/lang/gu.js  (1ms)  (pid 14541)
+Compiled ckeditor/lang/he.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/hi.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/hr.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/hu.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/is.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/it.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/ja.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/ka.js  (1ms)  (pid 14541)
+Compiled ckeditor/lang/km.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/ko.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/ku.js  (2ms)  (pid 14541)
+Compiled ckeditor/lang/lt.js  (1ms)  (pid 14541)
+Compiled ckeditor/lang/lv.js  (1ms)  (pid 14541)
+Compiled ckeditor/lang/mk.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/mn.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/ms.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/nb.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/nl.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/no.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/pl.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/pt-br.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/pt.js  (1ms)  (pid 14541)
+Compiled ckeditor/lang/ro.js  (1ms)  (pid 14541)
+Compiled ckeditor/lang/ru.js  (2ms)  (pid 14541)
+Compiled ckeditor/lang/sk.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/sl.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/sr-latn.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/sr.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/sv.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/th.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/tr.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/ug.js  (3ms)  (pid 14541)
+Compiled ckeditor/lang/uk.js  (1ms)  (pid 14541)
+Compiled ckeditor/lang/vi.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/zh-cn.js  (0ms)  (pid 14541)
+Compiled ckeditor/lang/zh.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ar.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/bg.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ca.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/cs.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/cy.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/da.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/de.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/el.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/en.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/eo.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/es.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/et.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/fa.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/fi.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/fr.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/gu.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/he.js  (1ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/hi.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/hr.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/hu.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/it.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ja.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/km.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ku.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/lt.js  (1ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/lv.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/mk.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/mn.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/nb.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/nl.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/no.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/pl.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/pt.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ro.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ru.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/sk.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/sl.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/sv.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/th.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/tr.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/ug.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/uk.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/vi.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/about/dialogs/about.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/clipboard/dialogs/paste.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/colordialog/dialogs/colordialog.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/dialog/dialogDefinition.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/div/dialogs/div.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/find/dialogs/find.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/flash/dialogs/flash.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/forms/dialogs/button.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/forms/dialogs/checkbox.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/forms/dialogs/form.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/forms/dialogs/hiddenfield.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/forms/dialogs/radio.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/forms/dialogs/select.js  (1ms)  (pid 14541)
+Compiled ckeditor/plugins/forms/dialogs/textarea.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/forms/dialogs/textfield.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/iframe/dialogs/iframe.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/image/dialogs/image.js  (56ms)  (pid 14541)
+Compiled ckeditor/plugins/link/dialogs/anchor.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/link/dialogs/link.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/liststyle/dialogs/liststyle.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/pastefromword/filter/default.js  (1ms)  (pid 14541)
+Compiled ckeditor/plugins/scayt/dialogs/options.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/scayt/dialogs/toolbar.css  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/smiley/dialogs/smiley.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/ca.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/cs.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/cy.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/de.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/el.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/en.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/eo.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/et.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/fa.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/fi.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/fr.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/he.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/hr.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/it.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/ku.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/lv.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/nb.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/nl.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/no.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/pl.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/pt-br.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/sk.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/sv.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/th.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/tr.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/ug.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/specialchar/dialogs/specialchar.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/table/dialogs/table.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/tabletools/dialogs/tableCell.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/templates/dialogs/templates.css  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/templates/dialogs/templates.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/templates/templates/default.js  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/wsc/dialogs/wsc.css  (0ms)  (pid 14541)
+Compiled ckeditor/plugins/wsc/dialogs/wsc.js  (0ms)  (pid 14541)
+Compiled ckeditor/skins/moono/dialog.css  (0ms)  (pid 14541)
+Compiled ckeditor/skins/moono/dialog_ie.css  (0ms)  (pid 14541)
+Compiled ckeditor/skins/moono/dialog_ie7.css  (0ms)  (pid 14541)
+Compiled ckeditor/skins/moono/dialog_ie8.css  (0ms)  (pid 14541)
+Compiled ckeditor/skins/moono/dialog_iequirks.css  (0ms)  (pid 14541)
+Compiled ckeditor/skins/moono/dialog_opera.css  (0ms)  (pid 14541)
+Compiled ckeditor/skins/moono/editor.css  (0ms)  (pid 14541)
+Compiled ckeditor/skins/moono/editor_gecko.css  (0ms)  (pid 14541)
+Compiled ckeditor/skins/moono/editor_ie.css  (0ms)  (pid 14541)
+Compiled ckeditor/skins/moono/editor_ie7.css  (0ms)  (pid 14541)
+Compiled ckeditor/skins/moono/editor_ie8.css  (0ms)  (pid 14541)
+Compiled ckeditor/skins/moono/editor_iequirks.css  (0ms)  (pid 14541)
+Compiled ckeditor/styles.js  (0ms)  (pid 14541)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 18:30:36 +0700
+Processing by CategoryController#all as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" ORDER BY created_at[0m
+  Rendered category/all.html.erb within layouts/application (1.1ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.7ms)
+[2013-07-09 18:31:09] FATAL SignalException: SIGTERM
+	/home/pasha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:170:in `select'
+	/home/pasha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:170:in `block in start'
+	/home/pasha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:32:in `start'
+	/home/pasha/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:160:in `start'
+	/home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/rack-1.4.5/lib/rack/handler/webrick.rb:13:in `run'
+	/home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/rack-1.4.5/lib/rack/server.rb:268:in `start'
+	/home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/railties-3.2.8/lib/rails/commands/server.rb:70:in `start'
+	/home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/railties-3.2.8/lib/rails/commands.rb:55:in `block in <top (required)>'
+	/home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/railties-3.2.8/lib/rails/commands.rb:50:in `tap'
+	/home/pasha/.rvm/gems/ruby-2.0.0-p247@pasha/gems/railties-3.2.8/lib/rails/commands.rb:50:in `<top (required)>'
+	script/rails:6:in `require'
+	script/rails:6:in `<main>'
+[2013-07-09 18:31:09] INFO  going to shutdown ...
+[2013-07-09 18:31:09] INFO  WEBrick::HTTPServer#start done.
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 18:30:41 +0700
+Processing by CategoryController#all as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT "jobs".* FROM "jobs" ORDER BY created_at[0m
+  Rendered category/all.html.erb within layouts/application (1.0ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 16ms (Views: 13.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 18:30:44 +0700
+Processing by CategoryController#all as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs" ORDER BY created_at[0m
+  Rendered category/all.html.erb within layouts/application (0.5ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-09 18:30:46 +0700
+Processing by CategoryController#all as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mJob Load (0.1ms)[0m  [1mSELECT "jobs".* FROM "jobs" ORDER BY created_at[0m
+  Rendered category/all.html.erb within layouts/application (0.5ms)
+default_url_options is passed options: {}
+
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms)
+Exiting

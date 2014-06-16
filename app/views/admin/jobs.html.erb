@@ -1,0 +1,54 @@
+<div class="wrapper">
+  <h1>
+    Admin <small>Работы в категории <%= @category.title_ru %></small>
+  </h1>
+
+  <div>
+    <%= link_to "Create job", controller: "admin", action: "create_job", category_id: @category.id %>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>
+          Slug
+        </th>
+        <th>
+          Title EN
+        </th>
+        <th>
+          Title RU
+        </th>
+        <th>
+          Small img
+        </th>
+        <th>
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @category.jobs.each do |job| %>
+        <tr>
+          <td>
+            <%= job.slug %>
+          </td>
+          <td>
+            <%= job.title_en %>
+          </td>
+          <td>
+            <%= job.title_ru %>
+          </td>
+          <td>
+            <%= image_tag job.small_img.url(:thumb) %>
+          </td>
+          <td>
+            <%= link_to "Edit", {controller: "admin", action: "edit_job", slug: @category.slug, id: job.id} %>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <%= link_to "Remove", {controller: "admin", action: "remove_job", id: job.id, slug: @category.slug}, method: :delete, :confirm => 'Are you sure?' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

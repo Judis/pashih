@@ -1,0 +1,13 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  lang: "en"
+  portfolio: "Portfolio"
+  about: "About me"
+  contact: "Contacts"
+  objective: "Objective"
+  related: "Related works"
+  latest: "Latest"
+  main_title: "Pavel Denisenko"
+  sub_title: "Graphic Designer"

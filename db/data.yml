@@ -1,0 +1,11 @@
+
+---
+categories:
+  columns:
+  - id
+  - slug
+  - title_en
+  - title_ru
+  - created_at
+  - updated_at
+  records: 

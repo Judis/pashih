@@ -1,0 +1,124 @@
+<div class="wrapper">
+  <h1>Admin <small>создать работу</small></h1>
+  <div class="row-fluid">
+    <div class="span10 offset1">
+      <%= form_for @job, url: {action: "save_job"}, html: {class: "form-horizontal", multipart: true} do |f| %>
+        <%= hidden_field_tag(:category_id, @category.id) %>
+
+        <% if @job.errors.any? %>
+          <div id="errorExplanation">
+            <h2><%= pluralize(@job.errors.count, "error") %> prohibited
+              this post from being saved:</h2>
+            <ul>
+            <% @job.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <div class="row-fluid">
+          <div class="span6 offset2">
+            <div class="control-group">
+              <label class="control-label" for="job_slug">Slug</label>
+              <div class="controls">
+                <%= f.text_field :slug %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="span5">
+            <div class="control-group">
+              <label class="control-label" for="job_title_en">Title (EN)</label>
+              <div class="controls">
+                <%= f.text_field :title_en %>
+              </div>
+            </div>
+          </div>
+          <div class="span5">
+            <div class="control-group">
+              <label class="control-label" for="job_title_ru">Title (RU)</label>
+              <div class="controls">
+                <%= f.text_field :title_ru %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="span5">
+            <div class="control-group">
+              <label class="control-label" for="job_objective_en">Objective (EN)</label>
+              <div class="controls">
+                <%= f.text_area :objective_en, rows: 5 %>
+              </div>
+            </div>
+          </div>
+          <div class="span5">
+            <div class="control-group">
+              <label class="control-label" for="job_objective_ru">Objective (RU)</label>
+              <div class="controls">
+                <%= f.text_area :objective_ru, rows: 5 %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="span10">
+            <div class="control-group">
+              <label class="control-label" for="job_description_en">Description (EN)</label>
+              <div class="controls">
+                <%= f.cktext_area :description_en, rows: 5 %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row-fluid">
+          <div class="span10">
+            <div class="control-group">
+              <label class="control-label" for="job_description_ru">Description (RU)</label>
+              <div class="controls">
+                <%= f.cktext_area :description_ru, rows: 5 %>
+              </div>
+            </div>
+          </div>          
+        </div>
+
+        <div class="row-fluid">
+          <div class="span10 date-select">
+            <div class="control-group">
+              <label class="control-label" for="pub_date_ru">Date</label>
+              <div class="controls">
+                <%= f.date_select :pub_date %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="span5">
+            <div class="control-group">
+              <label class="control-label" for="job_description_ru">Small image</label>
+              <div class="controls">
+                <%= f.file_field :small_img %>
+              </div>
+            </div>
+          </div>
+          <div class="span3 offset2">
+            Similar jobs:<br />
+            <%= select_tag(:similars, options_from_collection_for_select(@jobs, "id", "title_ru",@similar), { :multiple => true, :size => 5, :class => "pull-right for-chosen" }) %>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <div class="controls">
+            <br />
+            <%= f.submit "Create", class: "btn-primary" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+== Welcome to Project
+
+Site for Pavel Densenko.
+
+Simple static site with admin page.

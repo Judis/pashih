@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "try to update"
+cat /var/www/pasha/tmp/pids/server.pid | xargs kill -2
+
+sudo -u deploy -H bash -l -c "cd /var/www/pasha/ && git pull"
+chown -R pasha:deploy /var/www/pasha/
+sudo -u pasha -H bash -l -c "cd /var/www/pasha/ && rake db:migrate"
+sudo -u pasha -H bash -l -c "cd /var/www/pasha/ && bundle exec rails s -p 3333 -d"

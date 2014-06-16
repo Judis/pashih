@@ -1,0 +1,48 @@
+<div class="wrapper">
+  <h1>
+    Admin <small>Страницы</small>
+  </h1>
+
+  <div>
+    <%= link_to "Create page", controller: "admin", action: "create_page" %>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>
+          Slug
+        </th>
+        <th>
+          Title EN
+        </th>
+        <th>
+          Title RU
+        </th>
+        <th>
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @pages.each do |page| %>
+        <tr>
+          <td>
+            <%= page.slug %>
+          </td>
+          <td>
+            <%= page.title_en %>
+          </td>
+          <td>
+            <%= page.title_ru %>
+          </td>
+          <td>
+            <%= link_to "Edit", {controller: "admin", action: "edit_page", id: page.id} %>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <%= link_to "Remove", {controller: "admin", action: "remove_page", id: page.id}, method: :delete, :confirm => 'Are you sure?' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

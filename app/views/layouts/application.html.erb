@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      <% if params[:controller] == 'admin' %>
+        Admin
+      <% else %>
+        <%= t(:main_title) + " - " + t(:sub_title) if current_page?(controller: 'category', action: 'all') || 
+                                                      current_page?('/') %>
+        <%= @job['title_' + t(:lang)] unless @job.nil? %>
+        <%= t(:about) if current_page?(controller: 'page', action: 'view', slug: 'about') %>
+        <%= t(:contact) if current_page?(controller: 'page', action: 'view', slug: 'contact-me') %>
+      <% end %>
+    </title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="logo-block pull-left">
+        <div class="title pull-left">
+          <%= link_to(controller: "category", action: "all", slug: nil) do %>
+            <h1><%= t :main_title %> <br /><small><%= t :sub_title %></small></h1>
+          <% end %>
+        </div>
+
+        <div class="logo pull-left">
+          <%= link_to(controller: "category", action: "all", slug: nil) do %>
+            <img src="/assets/logo-top.png" alt="Pavel Denisenko logo" />
+          <% end %>
+        </div>
+
+        <div class="navigate navbar pull-left">
+          <ul class="nav">
+            <li class="<%= "active" if current_page?(controller: 'category', action: 'all') || current_page?('/') %>">
+              <%= link_to(t(:portfolio), {controller: 'category', action: 'all', slug: nil})%>
+            </li>
+            <li class="<%= "active" if current_page?(controller: 'page', action: 'view', slug: 'about') %>">
+              <%= link_to(t(:about), {controller: 'page', action: 'view', slug: 'about'})%>
+            </li>
+            <li class="<%= "active" if current_page?(controller: 'page', action: 'view', slug: 'contact-me') %>">
+              <%= link_to(t(:contact), {controller: 'page', action: 'view', slug: 'contact-me'})%>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <% unless current_page?(controller: 'page', action: 'view', slug: 'star') %>
+        <div class="nav-block pull-right">
+          <div class="lang-switcher navbar pull-right">
+            <ul class="nav">
+              <li class="<%= "active" if t(:lang) == "en" %>">
+                <%= link_to('In English', options={locale: 'en'}) %>
+              </li>
+              <li class="<%= "active" if t(:lang) == "ru" %>">
+                <%= link_to('По-русски', options={locale: 'ru'}) %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+    </header>
+
+    <div class="star">
+      <%= link_to(" ", {controller: 'page', action: 'view', slug: 'star', locale: "ru"})%>
+    </div>
+
+
+    <% if controller.controller_name == "admin" %>
+      <nav class="navbar">
+        <ul class="nav">
+          <li class="
+            <%= "active" if /^\/admin$/.match(request.fullpath) %>
+            <%= "parent" if /^\/admin\/categories(.*)?/.match(request.fullpath) %>
+          ">
+            <%= link_to "Categories", {controller: "admin", action: "categories"} %>
+          </li>
+          <li class="
+            <%= "active" if /^\/admin\/pages$/.match(request.fullpath) %>
+            <%= "parent" if /^\/admin\/pages(.*)?/.match(request.fullpath) %>
+          ">
+            <%= link_to "Pages", {controller: "admin", action: "pages"} %>
+          </li>
+        </ul>
+      </nav>
+    <% else %>
+      <% if @categories %>
+        <nav class="navbar">
+          <ul class="nav">
+            <li data-category="" class="category <%= "active" if request.fullpath == '/'+t(:lang) || request.fullpath == '/' %>">
+              <%= link_to({controller: 'category', action: 'all', slug: nil}) do %>
+                <span><%= t :latest %></span>
+              <% end %>
+            </li>
+            <% @categories.each do |category| %>
+              <li data-category="<%= category.slug %>" class="category
+                <%= "active" if current_page?(controller: 'category', action: 'all', slug: category.slug) %>
+                <% if @job %>
+                  <%= "parent" if current_page?(controller: 'category', action: 'view_job', slug: category.slug, job_slug: @job.slug) %>
+                <% end %>
+              ">
+                <%= link_to({controller: 'category', action: 'all', slug: category.slug}) do %>
+                  <span><%= category["title_"+t(:lang)] %></span>
+                  <span class="label-count"><%= category.jobs.count %></span>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </nav>
+      <% end %>
+    <% end %>
+
+    <section class="content">
+      <%= yield %>
+    </section>
+
+    <footer>
+      <div class="copyright pull-left">
+        &copy; <%= "2005 - #{Time.now.year}" %> <span>P. Denisenko</span>
+      </div>
+      <div class="pull-right navbar">
+        <ul class="nav">
+          <li class="facebook">
+            <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<%= "#{request.protocol}pashih.ru#{request.fullpath}" %>">Share</a>
+          </li>
+          <li class="vk">
+            <a target="_blank" href="http://vkontakte.ru/share.php?url=<%= "#{request.protocol}pashih.ru#{request.fullpath}" %>">&nbsp;</a>
+          </li>
+          <li class="tweeter">
+            <a href="http://twitter.com/share?url=<%= "#{request.protocol}pashih.ru#{request.fullpath}" %>&text=Pavel Denisenko - designer portfolio" target="_blank">Tweet</a>
+          </li>
+          <li class="odesk">
+            <a href="https://www.odesk.com/o/profiles/users/_~01cbe4ce3d8c504c60/">Hire me on </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="../assets/js/jquery.js"></script>-->
+    <!--<script src="./js/bootstrap.min.js"></script>-->
+
+  </body>
+</html>

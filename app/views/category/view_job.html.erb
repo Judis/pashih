@@ -1,0 +1,14 @@
+<div class="content-block">
+  <h2><%= @job["title_"+t(:lang)] %></h2>
+  <p class="description"><%= t :objective %>: <%= @job["objective_"+t(:lang)] %></p>
+  <%= raw @job["description_"+t(:lang)] %>
+  <% if @job.similar_jobs.count > 0 %>
+    <p class="related">
+      <%= t :related %>:<br />
+      <% length = @job.similar_jobs.length %>
+      <% @job.similar_jobs.each_with_index do |job, i| %>
+        <%= link_to(job["title_"+t(:lang)], {controller: 'category', action: 'view_job', slug: job.category.slug, job_slug: job.slug}) %><%= ", " if (i+1) < length %>
+      <% end %>
+    </p>
+  <% end %>
+</div>

@@ -1,0 +1,20 @@
+<ul class="portfolio<%= ' all' unless request.params['slug'] %>">
+  <% @jobs.each do |job| %>
+    <li data-category="<%= job.category.slug %>" class="job">
+      <%= link_to({controller: 'category', action: 'view_job', slug: job.category.slug, job_slug: job.slug}) do %>
+        <%= image_tag(job.small_img.url(:medium), alt: job.title_ru, title: job.title_ru, size: '220x220') %>
+        <div class="data-container">
+          <div class="data">
+            <strong><%= job['title_'+t(:lang)] %></strong>
+          </div>
+        </div>
+      <% end %>
+      <div class="category_name">
+        <%= job.category["title_#{params[:locale]}"] %>
+      </div>
+      <div class="link_to_job">
+        <%= link_to job["title_#{params[:locale]}"], job %>
+      </div>
+    </li>
+  <% end %>
+</ul>

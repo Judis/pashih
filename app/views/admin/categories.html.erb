@@ -1,0 +1,56 @@
+<div class="wrapper">
+  <h1>
+    Admin <small>Категории</small>
+  </h1>
+
+  <div>
+    <%= link_to "Create category", controller: "admin", action: "create_category" %>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>
+          Slug
+        </th>
+        <th>
+          Title EN
+        </th>
+        <th>
+          Title RU
+        </th>
+        <th>
+          Jobs
+        </th>
+        <th>
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @categories.each do |category| %>
+        <tr>
+          <td>
+            <%= category.slug %>
+          </td>
+          <td>
+            <%= category.title_en %>
+          </td>
+          <td>
+            <%= category.title_ru %>
+          </td>
+          <td>
+            <%= category.jobs.count %>
+          </td>
+          <td>
+            <%= link_to "Add item", {controller: "admin", action: "create_job", category_id: category.id} %>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <%= link_to "View", {controller: "admin", action: "jobs", slug: category.slug} %>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <%= link_to "Remove", {controller: "admin", action: "remove_category", id: category.id}, :confirm => 'Are you sure?', method: :delete %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
